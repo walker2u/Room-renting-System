@@ -1,5 +1,21 @@
 <?php session_start();
 require('../include/connection.php');
+require 'include/controller.admin.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    checkadminlogin($username,$password);
+
+    // if(checkadminlogin($username,$password)){
+    //     header('Location:dashboard.php');
+    // }
+    // else{
+    //     echo "Wrong Credentials!";
+    // }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +47,12 @@ require('../include/connection.php');
                                 </div>
                                 <div class="card-body">
 
-                                    <form method="post">
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" name="uemail" type="email"
-                                                placeholder="name@example.com" required />
-                                            <label for="inputEmail">Email address</label>
+                                            <input class="form-control" name="username" type="text"
+                                                placeholder="Username" required />
+                                            <label for="username">Username</label>
                                         </div>
 
 
