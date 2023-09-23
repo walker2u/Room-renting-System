@@ -30,15 +30,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.name {
-    display: flex;
-    justify-content: space-between;
-}
-
-.name input {
-    width: 48%;
-}
-
 input {
     padding: 8px 10px;
     border-radius: 10px;
