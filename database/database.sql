@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 07:23 PM
+-- Generation Time: Sep 23, 2023 at 07:37 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `rentingsystem`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(10) NOT NULL,
+  `admin_username` varchar(20) NOT NULL,
+  `admin_password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`) VALUES
+(1, 'admin', 'admin@9931');
 
 -- --------------------------------------------------------
 
@@ -47,6 +66,12 @@ INSERT INTO `owners` (`owner_id`, `owner_name`, `owner_email`, `owner_phone`, `o
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
 -- Indexes for table `owners`
 --
 ALTER TABLE `owners`
@@ -55,6 +80,12 @@ ALTER TABLE `owners`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `owners`

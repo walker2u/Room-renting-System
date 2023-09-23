@@ -7,13 +7,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = $_POST['password'];
 
     checkadminlogin($username,$password);
-
-    // if(checkadminlogin($username,$password)){
-    //     header('Location:dashboard.php');
-    // }
-    // else{
-    //     echo "Wrong Credentials!";
-    // }
 }
 
 ?>

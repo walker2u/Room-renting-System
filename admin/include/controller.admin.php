@@ -5,7 +5,7 @@ function checkadminlogin($username,$password){
     //$result = mysqli_query($con,$query);
     $result = $con->query($query);
     if(mysqli_num_rows($result)==1){
-        
+
         $result = mysqli_fetch_assoc($result);
         $_SESSION['admin_id']=$result['admin_id'];
         header('Location:dashboard.php');
