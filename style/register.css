@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #ebdede;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/registerBackground.jpg);
+}
+
+.form-container {
+    width: 380px;
+    background-color: wheat;
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name input {
+    width: 48%;
+}
+
+input {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* text-align: center; */
+}
+
+input[type='checkbox'] {
+    accent-color: rgb(5, 211, 183);
+    width: 15px;
+    height: 15px;
+}
+
+input:hover,
+select:hover {
+    border-color: transparent;
+    /* width: 50%; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password input {
+    width: 48%;
+}
+
+.terms {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+}
+
+.terms a {
+    color: rgb(240, 87, 17);
+}
+
+button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    background-color: rgb(5, 211, 183);
+    color: rgba(0, 0, 0, 0.699);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button2 {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    background-color: rgb(240, 87, 17);
+    /* background-color: rgb(210, 192, 57); */
+    color: rgba(0, 0, 0, 0.699);
+    cursor: pointer;
+    font-size: 15px;
+}
