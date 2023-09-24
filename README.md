@@ -10,4 +10,4 @@ clone this repo in your vs code. after havinig pull access.
 
 # Admin :-
  1. username : admin
- 2. password : askme
+ 2. password : Ask me!
