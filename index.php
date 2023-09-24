@@ -19,8 +19,7 @@
             <li><a href="#" class="links">Home</a></li>
             <li><a href="#" class="links">About</a></li>
             <li><a href="#" class="links">Contact</a></li>
-            <button><a href="#">Login</a></button>
-            <button><a href="#">Register</a></button>
+            <li><button><a href="#">RENT</a></button></li>
         </ul>
     </nav>
 </body>
