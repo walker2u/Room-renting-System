@@ -49,9 +49,17 @@ session_start();
 
                                         <p class="font-weight-light text-danger">
                                             <?php
-                                            if (isset($_SESSION['error'])) {
-                                                echo $_SESSION['error'];
-                                                unset($_SESSION['error']);
+                                            if (isset($_SESSION['error1'])) {
+                                                echo $_SESSION['error1'];
+                                                unset($_SESSION['error1']);
+                                            }
+                                            ?>
+                                        </p>
+                                        <p class="font-weight-light text-danger">
+                                            <?php
+                                            if (isset($_SESSION['error2'])) {
+                                                echo $_SESSION['error2'];
+                                                unset($_SESSION['error2']);
                                             }
                                             ?>
                                         </p>

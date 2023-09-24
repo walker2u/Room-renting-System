@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 07:37 PM
+-- Generation Time: Sep 24, 2023 at 08:11 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `admin_id` int(10) NOT NULL,
   `admin_username` varchar(20) NOT NULL,
-  `admin_password` varchar(30) NOT NULL
+  `admin_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`) VALUES
-(1, 'admin', 'admin@9931');
+(1, 'admin', '$2y$10$P17qIIW/TrkIJl.cYb4B3eigKNaRnxH2rRGo1ZLAmXSUXEeGuTKdW');
 
 -- --------------------------------------------------------
 
