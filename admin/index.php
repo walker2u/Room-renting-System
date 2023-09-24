@@ -1,14 +1,5 @@
-<?php session_start();
-require('../include/connection.php');
-require 'include/controller.admin.php';
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    checkadminlogin($username,$password);
-}
-
+<?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -40,29 +31,39 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                 </div>
                                 <div class="card-body">
 
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <form method="post" action="include/login.admin.php">
 
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="username" type="text"
-                                                placeholder="Username" required />
+                                                placeholder="Username" required>
                                             <label for="username">Username</label>
                                         </div>
 
 
                                         <div class="form-floating mb-3">
                                             <input class="form-control" name="password" type="password"
-                                                placeholder="Password" required />
+                                                placeholder="Password" required>
                                             <label for="inputPassword">Password</label>
                                         </div>
 
 
+                                        <p class="font-weight-light text-danger">
+                                            <?php
+                                            if (isset($_SESSION['error'])) {
+                                                echo $_SESSION['error'];
+                                                unset($_SESSION['error']);
+                                            }
+                                            ?>
+                                        </p>
+
                                         <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                            <button class="btn btn-primary px-4" name="login" type="submit">Login</button>
+                                            <button class="btn btn-primary px-4" name="login"
+                                                type="submit">Login</button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <div class="small"><a href="index.php">Back to Home</a></div>
+                                    <div class="small"><a href="../index.php">Back to Home</a></div>
                                 </div>
                             </div>
                         </div>
