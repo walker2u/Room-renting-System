@@ -7,3 +7,7 @@ clone this repo in your vs code. after havinig pull access.
 # To-Do's :-
  1. create Database naming : rentingsystem
  2. import mysql file from the database.sql provided..
+
+# Admin :-
+ 1. username : admin
+ 2. password : askme
