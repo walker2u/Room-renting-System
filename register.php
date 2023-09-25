@@ -34,7 +34,7 @@ session_start();
             echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['invalid_email']."</p>";
         }
         ?>
-        <input name="phone" type="tel" placeholder="Enter phone number" required>
+        <input name="phone" type="tel" placeholder="Enter phone number" required> 
         <?php
         if (isset($errors['invalid_number'])) {
             echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['invalid_number']."</p>";
