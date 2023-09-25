@@ -31,6 +31,7 @@ function login_owner($email, $password)
                 if (password_verify($pass, $result['owner_password'])) {
                     $_SESSION['owner_id'] = $result['owner_id'];
                     header('Location:../index.php');
+                    die();
                 } else {
                     $_SESSION['error2'] = "Wrong Password!!";
                     header('Location:../login.php');
@@ -49,4 +50,9 @@ function login_owner($email, $password)
         die();
     }
 
+}
+
+function generate_id(){
+
+    require 'connection.php';
 }

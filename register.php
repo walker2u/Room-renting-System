@@ -54,9 +54,8 @@ session_start();
             <input type="checkbox" /> I accept <a href="">Terms of Use</a>
         </div>
         <button type="submit" name="register">Register Now</button>
-        <button class="button2">Already Registered?</button>
+        <a href="login.php" class="button2" style="text-decoration:none;">Already Registered?</a>
     </form>
-    <!-- <script src="script/app.js"></script> -->
 </body>
 
 </html>

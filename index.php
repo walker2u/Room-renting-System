@@ -1,5 +1,11 @@
-<?php 
-  require 'include/connection.php';
+<?php
+    session_start();
+    require 'include/connection.php';
+    if(!isset($_SESSION['admin_id'])){
+        header('Location:login.php');
+        die();
+    }
+    else{
 ?>
 
 <!DOCTYPE html>
@@ -25,3 +31,5 @@
 </body>
 
 </html>
+
+<?php } ?>

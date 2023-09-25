@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style/login.css">
 
 </head>
@@ -16,7 +16,6 @@ session_start();
     <div class="container">
         <div class="form-box Login">
             <h1>LOGIN</h1>
-
             <form action="include/signin.php" method="post">
                 <?php if (isset($_SESSION['error1'])) {
                     echo $_SESSION['error1'];
@@ -44,14 +43,14 @@ session_start();
                 </div>
 
                 <div class="remember-forgot">
-                    <label><input type="checkbox">
+                    <!-- <label><input type="checkbox">
                         Remember me
-                    </label>
-                    <a href="#">Forget Password</a>
+                    </label> -->
+                    <a href="forgot-password.php">Forgot Password?</a>
                 </div>
                 <button class="btn" type="submit" name="login">LOGIN</button>
                 <div class="login-singup">
-                    <p>Don't have any account?
+                    <p>Don't have an account?
                         <a href="register.php" class="singup-link">SIGN UP</a>
                     </p>
                 </div>
