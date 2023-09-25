@@ -13,8 +13,8 @@ body {
     align-items: center;
     box-sizing: border-box;
     background: url(../img/registerBackground.jpg) no-repeat;
-    background-size: 100% 770px;
-    padding: 90px;
+    background-size: 100% 100vh;
+    padding-top: 100px;
 }
 
 .container {
@@ -53,7 +53,7 @@ body {
 
 .input-box label {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
@@ -78,7 +78,7 @@ body {
     font-size: 1em;
     color: black;
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 15px 35px 0 5px;
 }
 
 .input-box .icon {
@@ -142,4 +142,23 @@ body {
 
 .login-singup p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background: url(../img/registerBackground.jpg) no-repeat;
+        background-size: 100% 100vh;
+        position:center;
+        padding-top: 105px;
+    }
+
+    .container {
+        width: 300px;
+        height: 440px;
+    }
+
 }
