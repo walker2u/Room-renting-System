@@ -3,8 +3,7 @@ if (strlen($_SESSION['admin_id'] == 0)) {
     header('location:index.php');
     die();
 } else {
-
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -65,23 +64,39 @@ if (strlen($_SESSION['admin_id'] == 0)) {
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                        <?php 
+                                        $cnt = 1;
+                                        ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $cnt; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "first name"; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "last name"; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "email"; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "contact"; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo "posting date"; ?>
+                                                </td>
+                                                <td>
 
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-
-                                                <a href="user-profile.php?uid=">
-                                                    <i class="fas fa-edit"></i></a>
-                                                <a href="manage-users.php?id="
-                                                    onClick="return confirm('Do you really want to delete');"><i
-                                                        class="fa fa-trash" aria-hidden="true"></i></a>
-                                            </td>
-                                        </tr>
+                                                    <a href="user-profile.php?uid=<?php echo $row['id']; ?>">
+                                                        <i class="fas fa-edit"></i></a>
+                                                    <a href="manage-users.php?id=<?php echo $row['id']; ?>"
+                                                        onClick="return confirm('Do you really want to delete');"><i
+                                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                            <?php $cnt = $cnt + 1;
+                                         ?>
 
                                     </tbody>
                                 </table>

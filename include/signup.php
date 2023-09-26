@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     $confirm_password = $_POST['confirm_password'];
     $hashpass = password_hash($password, PASSWORD_BCRYPT);
 
-    //check_credentials($username,$email,$phone,$address,$password,$confirm_password);
     $errors = [];
     if (empty($username) || empty($email) || empty($phone) || empty($address) || empty($password) || empty($confirm_password)) {
         $errors['empty_field'] = "Please Fill all Details!";
@@ -33,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
         die();
     } else {
         register_owner($username, $email, $phone, $hashpass);
-        header('Location:../index.php');
+        header('Location:../login.php');
         die();
     }
 } else {
