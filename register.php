@@ -25,19 +25,19 @@ session_start();
         <input name="name" type="text" placeholder=" Enter full name" required>
         <?php
         if (isset($errors['empty_field'])) {
-            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['empty_field']."</p>";
+            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>" . $errors['empty_field'] . "</p>";
         }
         ?>
         <input name="email" type="email" placeholder="Enter email address" required>
         <?php
         if (isset($errors['invalid_email'])) {
-            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['invalid_email']."</p>";
+            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>" . $errors['invalid_email'] . "</p>";
         }
         ?>
-        <input name="phone" type="tel" placeholder="Enter phone number" required> 
+        <input name="phone" type="tel" placeholder="Enter phone number" required>
         <?php
         if (isset($errors['invalid_number'])) {
-            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['invalid_number']."</p>";
+            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>" . $errors['invalid_number'] . "</p>";
         }
         ?>
         <input name="address" type="text" placeholder="Enter your address" required>
@@ -47,13 +47,13 @@ session_start();
         </div>
         <?php
         if (isset($errors['password_mismatch'])) {
-            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>".$errors['password_mismatch']."</p>";
+            echo "<p style='display:block; margin: -16px; text-indent: -190px; color: red;'>" . $errors['password_mismatch'] . "</p>";
         }
         ?>
         <div class="terms">
             <input type="checkbox" /> I accept <a href="">Terms of Use</a>
         </div>
-        <button type="submit" name="register" value="register">Register Now</button>
+        <button type="submit" name="register">Register Now</button>
         <a href="login.php" class="button2" style="text-decoration:none;">Already Registered?</a>
     </form>
 </body>
