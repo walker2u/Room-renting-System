@@ -3,8 +3,7 @@ require 'controller.php';
 require 'connection.php';
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
-
+if (isset($_POST['register'])) {
     $username = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     if (strlen((string) $phone) != 10) {
         $errors['invalid_number'] = "Enter a valid number";
     }
-    if ($errors) {
+    if ($errors>count($errors)) {
         $_SESSION['errors'] = $errors;
         header('Location:../register.php');
         die();
@@ -39,3 +38,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     header('Location:../index.php');
     die();
 }
+?>

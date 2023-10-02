@@ -53,7 +53,7 @@ session_start();
         <div class="terms">
             <input type="checkbox" /> I accept <a href="">Terms of Use</a>
         </div>
-        <button type="submit" name="register">Register Now</button>
+        <button type="submit" name="register" value="register">Register Now</button>
         <a href="login.php" class="button2" style="text-decoration:none;">Already Registered?</a>
     </form>
 </body>
