@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2023 at 08:11 AM
+-- Generation Time: Oct 12, 2023 at 02:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -51,7 +51,7 @@ CREATE TABLE `owners` (
   `owner_name` varchar(50) NOT NULL,
   `owner_email` varchar(30) NOT NULL,
   `owner_phone` varchar(12) NOT NULL,
-  `owner_password` varchar(30) NOT NULL
+  `owner_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -59,7 +59,11 @@ CREATE TABLE `owners` (
 --
 
 INSERT INTO `owners` (`owner_id`, `owner_name`, `owner_email`, `owner_phone`, `owner_password`) VALUES
-(1, 'Yes Daddy', 'yesdaddy@gmail.com', '6969696969', 'yamettee');
+(5, 'owner1', 'owner1@gmail.com', '7896541230', '$2y$10$jaGCm7UBJwJOrCa8qFil9u1TQDoZtPFuaTpTxBZjxVS60otQqrtPC'),
+(6, 'owner6', 'owner6@mail.com', '7896541230', '$2y$10$txTDQ.Zqz0cXZdUiJLNR2.9LXlFCTWvNNg2a08zOdHZ9WbbeOn3iG'),
+(7, 'owner10', 'owner10@mail.com', '8521479632', '$2y$10$ox7ORXj7T3GOuciEhvVfgudwWZkdx52.kZJZuU4pPoKlazrARrnYe'),
+(8, 'owner12', 'owner12@gmail.com', '7412589635', '$2y$10$aaqzKsMUQtkZq1PPk3lTVe.5.SOxZu.oXHv9bRe0mK/VBHY9GDahC'),
+(9, 'Mayank Kumar Prasad', 'mayank@mk.com', '9508247636', '$2y$10$7ep/UkNTQih2P6TrAGPOjO7J0iOZrWaqFeXo1k4Tg0b6oY13w8C46');
 
 --
 -- Indexes for dumped tables
@@ -91,7 +95,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `owners`
 --
 ALTER TABLE `owners`
-  MODIFY `owner_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `owner_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
